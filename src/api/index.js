@@ -17,7 +17,7 @@ export const fetchData = async (country) => {
     return error;
   }
 };
-
+// get daily numbers 
 export const fetchDailyData = async () => {
     try {
       const { data } = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
@@ -27,7 +27,7 @@ export const fetchDailyData = async () => {
       return error;
     }
   };
-
+// get cases from selected country
 export const fetchCountries = async () => {
   try {
     const { data: { countries } } = await axios.get(`${url}/countries`);

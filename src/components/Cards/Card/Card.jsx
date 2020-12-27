@@ -4,7 +4,8 @@ import CountUp from 'react-countup';
 import cx from 'classnames';
 
 import styles from './Card.module.css';
-
+// cards for the cases
+// count up to the number shown is done here
 const CardComponent = ({ className, cardTitle, value, lastUpdate, cardSubtitle }) => (
   <Grid item xs={12} md={3} component={Card} className={cx(styles.card, className)}>
     <CardContent>
@@ -12,6 +13,7 @@ const CardComponent = ({ className, cardTitle, value, lastUpdate, cardSubtitle }
         {cardTitle}
       </Typography>
       <Typography variant="h5" component="h2">
+      
         <CountUp start={0} end={value} duration={2.75} separator="," />
       </Typography>
       <Typography color="textSecondary">
